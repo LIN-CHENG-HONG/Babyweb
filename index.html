@@ -15,10 +15,101 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+	<!--CSS區 -->  <!-- mix-blend-mode:multiply 圖片去背-->
+    <style type="text/css">
+     body{background: babybackground.jpg ;}
+	.center{text-align:center;}
+	.Head{width:800;}
+	.imgsize img{width:110px;height:90px;margin-left:25px;}
+	.imgsizelogo img{width:110px;height:130px;transform:rotate(42deg);mix-blend-mode:multiply;}
+	.marginchange img{margin-left:70px;}
+	.marginchangefounder img{margin-right:80px; padding-bottom:700px;width:900;}
+    .marginchange_foundertext td{margin-left:30px;} 
+    .marginchange_big img{margin-left:390px;}
+	.marginchange_big1 img{margin-left:690px;}
+	.td1{font-size:22pt;}
+	.textchange{font-size:17pt;font-family:sans-serif;}
+	 td{border:1;border-color:#660033;}
+	 table{margin-left:70px;}
+	 .tablechange{margin-left:240px;}
+	 .highchange img{height:700px;}
+	 #fonttopic{color:#870c84 ;font-size:25pt;font-style:bold;}
+	 #fonttopiclogo{color:#870c84 ;font-size:44pt;font-style:bold;}
+	 #textbig{font-size:17pt;font-family:sans-serif;}
+	.CourselListener{
+		width: 1600px;
+		height: 680px;
+		position: relative;
+	}
+	.CourselListener>a{
+		display: block;
+		position: absolute;
+		top:115px;
+		left:170px;
+		opacity: 0;
+    filter: alpha(opacity=0);
+    /*當圖片數量增加，影片長度需更改，變為5s*圖片數量*/
+    -webkit-animation: silder 15s linear infinite;
+    				animation: silder 15s linear infinite;
+	}
+	.CourselListener>a>img{
+		max-width: 98%;
+	}
 
+/*動畫關鍵影格*/
+	@-webkit-keyframes silder {
+	    3% {
+	        opacity: 1;
+	        filter: alpha(opacity=100);
+	    }
+	    27% {
+	        opacity: 1;
+	        filter: alpha(opacity=100);
+	    }
+	    30% {
+	        opacity: 0;
+	        filter: alpha(opacity=0);
+	    }
+	}
+	@keyframes silder {
+	    3% {
+	        opacity: 1;
+	        filter: alpha(opacity=100);
+	    }
+	    27% {
+	        opacity: 1;
+	        filter: alpha(opacity=100);
+	    }
+	    30% {
+	        opacity: 0;
+	        filter: alpha(opacity=0);
+	    }
+	}
+
+/*每個圖片各延遲5秒*/
+	.CourselListener>a:nth-child(3) {
+		-webkit-animation-delay: 10s;
+		        animation-delay: 10s;	            
+	}
+
+	.CourselListener>a:nth-child(2) {
+		-webkit-animation-delay: 5s;
+		        animation-delay: 5s;
+	}
+
+	.CourselListener>a:nth-child(1) {
+		-webkit-animation-delay: 0s;
+		        animation-delay: 0s;    
+	}
+/*滑入時停止播放*/
+	.CourselListener:hover>a{
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+</style>
 </head>
 
-<body>
+<body background="網站\正式版\uza\webimage\babybackground.jpg" >
     <!-- Preloader -->
     <div id="preloader">
         <div class="wrapper">
@@ -56,7 +147,7 @@
                 <nav class="classy-navbar justify-content-between" id="uzaNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+                    <a class="nav-brand" href="index.html"><img src="webimage/logo.jpg" width="266" height="104" border="0" alt="not found"></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -74,42 +165,17 @@
                         <div class="classynav">
                             <ul id="nav">
                                 <li class="current-item"><a href="./index.html">Home</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./index.html">- Home</a></li>
-                                        <li><a href="./about.html">- About</a></li>
-                                        <li><a href="./services.html">- Services</a></li>
-                                        <li><a href="./portfolio.html">- Portfolio</a></li>
-                                        <li><a href="./portfolio-single.html">- Single Portfolio</a></li>
-                                        <li><a href="./blog.html">- Blog</a></li>
-                                        <li><a href="./single-blog.html">- Blog Details</a></li>
-                                        <li><a href="./contact.html">- Contact</a></li>
-                                        <li><a href="#">- Dropdown</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#">- Dropdown Item</a></li>
-                                                <li><a href="#">- Dropdown Item</a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">- Dropdown Item</a></li>
-                                                <li><a href="#">- Dropdown Item</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <li><a href="#">產品介紹</a>
+                                    
                                 </li>
-                                <li><a href="./portfolio.html">Portfolio</a></li>
-                                <li><a href="./about.html">About</a></li>
-                                <li><a href="#">Blog</a>
+                                <li><a href="./portfolio.html">題庫練習</a></li>
+                                <li><a href="./about.html">相關報導</a></li>
+                                <li><a href="#">Contact</a>
                                     <ul class="dropdown">
                                         <li><a href="./blog.html">- Blog</a></li>
                                         <li><a href="./single-blog.html">- Blog Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./contact.html">Contact</a></li>
                             </ul>
 
                             <!-- Get A Quote -->
@@ -135,445 +201,79 @@
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
+            <div class="single-welcome-slide">
+                <!-- Background Curve -->
+                <div class="background-curve">
+                    <img src="./img/core-img/curve-1.png" alt="">
+                </div>
     <!-- ***** Welcome Area Start ***** -->
-    <section class="welcome-area">
-        <div class="welcome-slides owl-carousel">
-
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide">
-                <!-- Background Curve -->
-                <div class="background-curve">
-                    <img src="./img/core-img/curve-1.png" alt="">
-                </div>
-
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12 col-md-6">
-                                <div class="welcome-text">
-                                    <h2 data-animation="fadeInUp" data-delay="100ms">Uza makes your <br> biz <span>greater</span></h2>
-                                    <h5 data-animation="fadeInUp" data-delay="400ms">We love to create "cool" things on Digital Platforms</h5>
-                                    <a href="#" class="btn uza-btn btn-2" data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
-                                </div>
-                            </div>
-                            <!-- Welcome Thumbnail -->
-                            <div class="col-12 col-md-6">
-                                <div class="welcome-thumbnail">
-                                    <img src="./img/bg-img/1.png" alt="" data-animation="slideInRight" data-delay="400ms">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide">
-                <!-- Background Curve -->
-                <div class="background-curve">
-                    <img src="./img/core-img/curve-1.png" alt="">
-                </div>
-
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12 col-md-6">
-                                <div class="welcome-text">
-                                    <h2 data-animation="fadeInUp" data-delay="100ms">Uza makes your <br> biz <span>greater</span></h2>
-                                    <h5 data-animation="fadeInUp" data-delay="400ms">We love to create "cool" things on Digital Platforms</h5>
-                                    <a href="#" class="btn uza-btn btn-2" data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
-                                </div>
-                            </div>
-                            <!-- Welcome Thumbnail -->
-                            <div class="col-12 col-md-6">
-                                <div class="welcome-thumbnail">
-                                    <img src="./img/bg-img/1.png" alt="" data-animation="slideInRight" data-delay="400ms">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide">
-                <!-- Background Curve -->
-                <div class="background-curve">
-                    <img src="./img/core-img/curve-1.png" alt="">
-                </div>
-
-                <!-- Welcome Content -->
-                <div class="welcome-content h-100">
-                    <div class="container h-100">
-                        <div class="row h-100 align-items-center">
-                            <!-- Welcome Text -->
-                            <div class="col-12 col-md-6">
-                                <div class="welcome-text">
-                                    <h2 data-animation="fadeInUp" data-delay="100ms">Uza makes your <br> biz <span>greater</span></h2>
-                                    <h5 data-animation="fadeInUp" data-delay="400ms">We love to create "cool" things on Digital Platforms</h5>
-                                    <a href="#" class="btn uza-btn btn-2" data-animation="fadeInUp" data-delay="700ms">Start Exploring</a>
-                                </div>
-                            </div>
-                            <!-- Welcome Thumbnail -->
-                            <div class="col-12 col-md-6">
-                                <div class="welcome-thumbnail">
-                                    <img src="./img/bg-img/1.png" alt="" data-animation="slideInRight" data-delay="400ms">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
+			<!--@輪播 -->			
+			<div class="CourselListener">
+				<a href="" class="highchange"><center><img src="webimage/babycoursel.jpg" width="1600"  alt="not found"></center></a>
+				<a href="#" class="highchange"><center><img src="webimage/TV1coursel1.jpg"  width="1600"  alt="not found"></center></a>
+				<a href="#" class="highchange"><center><img src="webimage/testcoursel.jpg" width="1600"  alt="not found"></center></a>
+			</div>
     <!-- ***** Welcome Area End ***** -->
-
+      </div>
     <!-- ***** About Us Area Start ***** -->
-    <section class="uza-about-us-area">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <!-- About Thumbnail -->
-                <div class="col-12 col-md-6">
-                    <div class="about-us-thumbnail mb-80">
-                        <img src="./img/bg-img/2.jpg" alt="">
-                        <!-- Video Area -->
-                        <div class="uza-video-area hi-icon-effect-8">
-                            <a href="https://www.youtube.com/watch?v=sSakBz_eYzQ" class="hi-icon video-play-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- About Us Content -->
-                <div class="col-12 col-md-6">
-                    <div class="about-us-content mb-80">
-                        <h2>We're a Agency Team &amp; Digital Marketing</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
-                        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est Lorem ipsum dolor sit amet ipsumlor eut consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labore et dolore magna
-                            liquyam erat.</p>
-                        <a href="#" class="btn uza-btn btn-2 mt-4">Start Exploring</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Background Pattern -->
-        <div class="about-bg-pattern">
-            <img src="./img/core-img/curve-2.png" alt="">
-        </div>
-    </section>
+     <br><br><br><br><br><br>
     <!-- ***** About Us Area End ***** -->
 
-    <!-- ***** Services Area Start ***** -->
-    <section class="uza-services-area section-padding-80-0">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Our Services</h2>
-                    </div>
-                </div>
-            </div>
+    <!-- ***** News Area Start ***** -->
+       <table border=1 class="tablechange">
+			<tr>
+				 <th colspan=2>&nbsp;<span class="imgsizelogo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="webimage/bottle1.png"  border="0" alt="not found" ></span>
+				 &nbsp;&nbsp;<span id="fonttopiclogo">最新消息</span></th>
+				 <th class="center" id="fonttopic">詳細內容</th>
+				 <th class="center" id="fonttopic">&nbsp;&nbsp;所屬類別&nbsp;&nbsp;</th>
+				 <th class="center" id="fonttopic">&nbsp;&nbsp;​發佈日期&nbsp;&nbsp;</th>
+			</tr>
+			<tr>
+				 <td colspan=2><span class="imgsize"><img src="webimage/baby.jpg" width="70" height="70" border="0" ></span>&nbsp;​​
+				 <span class="td1">嬰兒打疫苗小常識一定要知道</span></td>
+				 <td>​嬰兒一出生就要施打各種疫苗，包含卡介苗、日本腦炎</td>
+				 <td class="center" id="textbig">衛教資訊</td>
+				 <td class="center" id="textbig">2020/01/16</td>	
+		    </tr>
 
-            <div class="row">
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-lg-4">
-                    <div class="single-service-area mb-80">
-                        <!-- Service Icon -->
-                        <div class="service-icon">
-                            <i class="icon_cone_alt"></i>
-                        </div>
-                        <h5>Business Strategy</h5>
-                        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata.</p>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-lg-4">
-                    <div class="single-service-area mb-80">
-                        <!-- Service Icon -->
-                        <div class="service-icon">
-                            <i class="icon_piechart"></i>
-                        </div>
-                        <h5>Market Analytics</h5>
-                        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata.</p>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-lg-4">
-                    <div class="single-service-area mb-80">
-                        <!-- Service Icon -->
-                        <div class="service-icon">
-                            <i class="icon_easel"></i>
-                        </div>
-                        <h5>Marketing Social</h5>
-                        <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ***** Services Area End ***** -->
-
+			<tr>
+				<td colspan=2><span class="imgsize"><img src="webimage/DLC.png" width="70" height="70" border="0" ></span>&nbsp;
+				<span class="td1">DLC擴充包關卡預告--意想不到突發事件</span></td>
+				<td>​原本的關卡固然好玩，但DLC精彩內容必能讓你大呼過癮</td>
+				<td class="center" id="textbig">新功能預告</td>
+				<td class="center" id="textbig">2020/01/11</td>
+			</tr>
+			<tr>
+				<td colspan=2><span class="imgsize"><img src="webimage/website8.png" width="70" height="70" border="0" ></span>&nbsp;
+				<font color="#ff3333" class="td1">2/10~2/14網站例行性維護造成使用者不便</font></td>
+				<td>本系統將於2/10~2/14進行例行維護，會改善以下功能:</td>
+				
+				<td class="center" id="textbig">改版</td>
+				<td class="center" id="textbig">2020/01/09</td>
+			</tr>
+		</table>
+	</div>
+    <!-- ***** News Area End ***** -->
+      <br><br>
     <!-- ***** Portfolio Area Start ***** -->
-    <section class="uza-portfolio-area section-padding-80">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>Our Portfolio</h2>
-                        <p>We stay on top of our industry by being experts in yours.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Portfolio Slides -->
-                <div class="portfolio-sildes owl-carousel">
-
-                    <!-- Single Portfolio Slide -->
-                    <div class="single-portfolio-slide">
-                        <img src="./img/bg-img/3.jpg" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Digital Marketing</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Slide -->
-                    <div class="single-portfolio-slide">
-                        <img src="./img/bg-img/4.jpg" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Digital Marketing</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Slide -->
-                    <div class="single-portfolio-slide">
-                        <img src="./img/bg-img/5.jpg" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Digital Marketing</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Slide -->
-                    <div class="single-portfolio-slide">
-                        <img src="./img/bg-img/6.jpg" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Digital Marketing</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Slide -->
-                    <div class="single-portfolio-slide">
-                        <img src="./img/bg-img/5.jpg" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Digital Marketing</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Single Portfolio Slide -->
-                    <div class="single-portfolio-slide">
-                        <img src="./img/bg-img/6.jpg" alt="">
-                        <!-- Overlay Effect -->
-                        <div class="overlay-effect">
-                            <h4>Digital Marketing</h4>
-                            <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet gubergren no sea takimata sanctus est</p>
-                        </div>
-                        <!-- View More -->
-                        <div class="view-more-btn">
-                            <a href="#"><i class="arrow_right"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Client Feedback Area Start -->
-        <div class="clients-feedback-area mt-80 section-padding-80 clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Testimonial Slides -->
-                        <div class="testimonial-slides owl-carousel">
-
-                            <!-- Single Testimonial Slide -->
-                            <div class="single-testimonial-slide d-flex align-items-center">
-                                <!-- Testimonial Thumbnail -->
-                                <div class="testimonial-thumbnail">
-                                    <img src="./img/bg-img/7.jpg" alt="">
-                                </div>
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-content">
-                                    <h4>“Colorlib Ltd’s ranking has gone up so much from the great work that your team has done and our brand get organic sales consistently from your efforts. We are happy that the results of your efforts were lasting and profitable.”</h4>
-                                    <!-- Ratings -->
-                                    <div class="ratings">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                    </div>
-                                    <!-- Author Info -->
-                                    <div class="author-info">
-                                        <h5>Darrell Goodman <span>- CEO colorlib</span></h5>
-                                    </div>
-                                    <!-- Quote Icon -->
-                                    <div class="quote-icon"><img src="img/core-img/quote.png" alt=""></div>
-                                </div>
-                            </div>
-
-                            <!-- Single Testimonial Slide -->
-                            <div class="single-testimonial-slide d-flex align-items-center">
-                                <!-- Testimonial Thumbnail -->
-                                <div class="testimonial-thumbnail">
-                                    <img src="./img/bg-img/23.jpg" alt="">
-                                </div>
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-content">
-                                    <h4>“Colorlib Ltd’s ranking has gone up so much from the great work that your team has done and our brand get organic sales consistently from your efforts. We are happy that the results of your efforts were lasting and profitable.”</h4>
-                                    <!-- Ratings -->
-                                    <div class="ratings">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                    </div>
-                                    <!-- Author Info -->
-                                    <div class="author-info">
-                                        <h5>Darrell Goodman <span>- CEO colorlib</span></h5>
-                                    </div>
-                                    <!-- Quote Icon -->
-                                    <div class="quote-icon"><img src="img/core-img/quote.png" alt=""></div>
-                                </div>
-                            </div>
-
-                            <!-- Single Testimonial Slide -->
-                            <div class="single-testimonial-slide d-flex align-items-center">
-                                <!-- Testimonial Thumbnail -->
-                                <div class="testimonial-thumbnail">
-                                    <img src="./img/bg-img/24.jpg" alt="">
-                                </div>
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-content">
-                                    <h4>“Colorlib Ltd’s ranking has gone up so much from the great work that your team has done and our brand get organic sales consistently from your efforts. We are happy that the results of your efforts were lasting and profitable.”</h4>
-                                    <!-- Ratings -->
-                                    <div class="ratings">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                    </div>
-                                    <!-- Author Info -->
-                                    <div class="author-info">
-                                        <h5>Darrell Goodman <span>- CEO colorlib</span></h5>
-                                    </div>
-                                    <!-- Quote Icon -->
-                                    <div class="quote-icon"><img src="img/core-img/quote.png" alt=""></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Client Feedback Area End -->
-
-        <!-- Border -->
-        <div class="container">
-            <div class="border-line"></div>
-        </div>
-
-        <!-- Background Curve -->
-        <div class="portfolio-bg-curve">
-            <img src="./img/core-img/curve-3.png" alt="">
-        </div>
-    </section>
+      <!-- @系統特色 -->
+  <span class="Head"><font size="51pt" color="#cc00ff" > <strong >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本系統特色</strong></font></span>
+  <br><br>    
+	    <span class="marginchange"><img src="webimage/characteristic.jpg" width="569" height="363" border="0" alt="not found"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="webimage/characteristic1.jpg" width="569" height="363" border="0" alt="not found">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="webimage/characteristic2.jpg" width="569" height="363" border="0" alt="not found">                        
     <!-- ***** Portfolio Area End ***** -->
-
+    <br><br>
     <!-- ***** Blog Area Start ***** -->
     <section class="uza-blog-area">
         <!-- Background Curve -->
         <div class="blog-bg-curve">
             <img src="./img/core-img/curve-4.png" alt="">
-        </div>
-
-        <!-- CTA Area Start -->
-        <div class="uza-cta-area section-padding-0-80">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-8">
-                        <div class="cta-content mb-80">
-                            <h2>Interested in working with us?</h2>
-                            <h6>Hit the button below or give us a call!</h6>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-4">
-                        <div class="cta-content mb-80">
-                            <div class="call-now-btn">
-                                <a href="#"><span>Call us now:</span> (+65) 1234 5678</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- CTA Area End -->
-
+        </div>       
         <div class="container">
             <div class="row">
                 <!-- Section Heading -->
                 <div class="col-12">
                     <div class="section-heading text-center">
-                        <h2>Our Latest Blogs</h2>
-                        <p>Hit the button below or give us a call!</p>
+                        <h2>創辦人介紹</h2>                        
                     </div>
                 </div>
             </div>
@@ -581,43 +281,29 @@
             <div class="row">
 
                 <!-- Single Blog Post -->
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-16">
                     <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/8.jpg);">
                         <!-- Post Content -->
                         <div class="post-content">
-                            <span class="post-date"><span>23</span> August, 2018</span>
-                            <a href="#" class="post-title">SEO: The Movie By Ignite Visibility</a>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut</p>
-                            <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
+						    <table>
+						    <tr>
+								<td  class="marginchange_founder"><center><img src="webimage/Huai-Sheng-Huang.jpeg" width="270"  height="270" border="0" alt="not found"></center></td>
+								<td class="marginchange_foundertext"><p class="post-title" > &nbsp;&nbsp;&nbsp;&nbsp;黃懷陞先生</p>
+							        <p class="post-title" > ​&nbsp;&nbsp;&nbsp;&nbsp;最高學歷:國立交通大學資訊工程博士</p>
+									<p class="post-title" >&nbsp;&nbsp;&nbsp;&nbsp;公司創辦日期:&nbsp;&nbsp;<span><font size="13pt" color="#0033ff">1</font></span>&nbsp;July, 2010</span></p></td>
+						    </tr>
+						    <tr>								
+								<td class="textchange" colspan=2 style="font-style:oblique">我一直對這主題很有興趣，我也是VR愛好者，於是召集有意願學生參與專案開發。在實作過程中越想知道照護人員日常生活，
+									   甚至想要考相關證照。在與學生討論專案時，都告訴研究者要秉持著熱忱提供術科練習管道給有需求的人。本團隊堅持顧客至上，
+									   以適合客群瀏覽的介面與操作方式來把關品質，本系統不定時會有測試者使用，依受試者的需求改善。最後期望這套系統對使用者有莫大幫助。</td>
+						    </tr>
+						    </table>
+						    
+                                                        
+                            
                         </div>
                     </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="col-12 col-lg-4">
-                    <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/9.jpg);">
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <span class="post-date"><span>13</span> December, 2018</span>
-                            <a href="#" class="post-title">What Curling Irons Are The Best Ones</a>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut</p>
-                            <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Post -->
-                <div class="col-12 col-lg-4">
-                    <div class="single-blog-post bg-img mb-80" style="background-image: url(./img/bg-img/10.jpg);">
-                        <!-- Post Content -->
-                        <div class="post-content">
-                            <span class="post-date"><span>08</span> July, 2018</span>
-                            <a href="#" class="post-title">Amazon REV Workshop: Road to Seattle</a>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing esed diam nonumy eirmod tempor invidunt ut</p>
-                            <a href="#" class="read-more-btn">Read More <i class="arrow_carrot-2right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                </div>                               
 
             </div>
         </div>
@@ -625,30 +311,7 @@
     <!-- ***** Blog Area End ***** -->
 
     <!-- ***** Newsletter Area Start ***** -->
-    <section class="uza-newsletter-area">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <!-- Newsletter Content -->
-                <div class="col-12 col-md-6 col-lg-6">
-                    <div class="nl-content mb-80">
-                        <h2>Subscribe to our Newsletter</h2>
-                        <p>Subscribe our newsletter gor get notification about new updates, etc...</p>
-                    </div>
-                </div>
-                <!-- Newsletter Form -->
-                <div class="col-12 col-md-6 col-lg-5">
-                    <div class="nl-form mb-80">
-                        <form action="#" method="post">
-                            <input type="email" name="nl-email" value="" placeholder="Your Email">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Border Bottom -->
-            <div class="border-line"></div>
-        </div>
-    </section>
+    
     <!-- ***** Newsletter Area End ***** -->
 
     <!-- ***** Footer Area Start ***** -->
@@ -665,9 +328,9 @@
                         <!-- Footer Content -->
                         <div class="footer-content mb-15">
                             <h3>(+65) 1234 5678</h3>
-                            <p>40 Baria Sreet 13/2 NY City, US <br> hello.colorlib@gmail.com</p>
+                            <p>New Taipei,Taiwan <br> hshuang@im.fju.edu.tw</p>
                         </div>
-                        <p class="mb-0">Mon - Fri: 9:00 - 19:00 <br>
+                        <p class="mb-0">Mon - Fri: 9:00 - 17:00 <br>
                             Closed on Weekends</p>
                     </div>
                 </div>
@@ -715,11 +378,11 @@
                     <div class="single-footer-widget mb-80">
                         <!-- Widget Title -->
                         <h4 class="widget-title">About Us</h4>
-                        <p>Integer vehicula mauris libero, at molestie eros imperdiet sit amet.</p>
+                        <p>wcnlab is a group consist of 15 people</p>
 
                         <!-- Copywrite Text -->
                         <div class="copywrite-text mb-30">
-                            <p>&copy; Copyright 2018 <a href="#">Colorlib</a>.</p>
+                            <p>&copy; Copyright 2020 by <a href="#">Wcnlab</a>.</p>
                         </div>
 
                         <!-- Social Info -->
@@ -738,7 +401,7 @@
  <div class="row" style="margin-bottom: 30px;">
                 
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Wcnlab</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>
 
