@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Uza - Creative Agency HTML5 Template</title>
+    <title>虛擬實境應用於幼兒照護訓練</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.ico">
@@ -64,6 +64,8 @@
 	}
 	.CourselListener>a>img{
 		max-width: 98%;
+        max-height: 98%;
+        
 	}
 
 	/*動畫關鍵影格*/
@@ -116,6 +118,10 @@
 		-webkit-animation-play-state: paused;
 				animation-play-state: paused;
 	}
+
+        .Tablesize>a>{
+            width: 1000;
+        }
 	</style>
 </head>
 
@@ -176,38 +182,10 @@
                         <div class="classynav">
                             <ul id="nav">
                                 <li class="current-item"><a href="./index.html">Home</a></li>
-                                <li><a href="#">產品介紹</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">- Home</a></li>
-                                        <li><a href="#">- </a></li>
-                                        <li><a href="#">- </a></li>
-                                        <li><a href="#">- </a></li>
-                                        <li><a href="#">- </a></li>                                        
-                                        <li><a href="#">- Dropdown</a>
-                                            <ul class="dropdown">
-                                                <li><a href="#">- Dropdown Item</a></li>
-                                                <li><a href="#">- Dropdown Item</a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                        <li><a href="#">- Even Dropdown</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">- Dropdown Item</a></li>
-                                                <li><a href="#">- Dropdown Item</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li class="current-item"><a href="./product introduce.html">產品介紹</a></li>
                                 <li><a href="./portfolio.html">題庫練習</a></li>
                                 <li><a href="./about.html">相關報導</a></li>
-                                <li><a href="#">Contact</a>
-                                    <ul class="dropdown">
-                                        <li><a href="./blog.html">- Blog</a></li>
-                                        <li><a href="./single-blog.html">- Blog Details</a></li>
-                                    </ul>
-                                </li>
+                                
                             </ul>
 
                             <!-- Get A Quote -->
@@ -217,7 +195,7 @@
 
                             <!-- Login / Register -->
                             <div class="login-register-btn mx-3">
-                                <a href="login.php">Login <span>/ Register</span></a>
+                                <a href="login.php">登入 <span>/ 註冊帳號</span></a>
                             </div>
 
                             <!-- Search Icon -->
@@ -240,8 +218,8 @@
                 </div>
     <!-- ***** Welcome Area Start ***** -->
 			<!--@輪播 -->			
-			<div class="CourselListener">
-				<a href="" class="highchange"><center><img src="webimage/babycoursel.jpg" width="1600"  alt="not found"></center></a>
+			<div class="CourselListener" >
+				<a href="" class="highchange"><center><img src="webimage/babycoursel.jpg" width="1600" height="500" alt="not found"></center></a>
 				<a href="#" class="highchange"><center><img src="webimage/TV1coursel1.jpg"  width="1600"  alt="not found"></center></a>
 				<a href="#" class="highchange"><center><img src="webimage/testcoursel.jpg" width="1600"  alt="not found"></center></a>
 			</div>
@@ -252,9 +230,9 @@
     <!-- ***** About Us Area End ***** -->
 
     <!-- ***** News Area Start ***** -->
-       <table border=1 class="tablechange">
+       <table border=1 class="tablechange "  align="center" width=100%>
 			<tr>
-				 <th colspan=2>&nbsp;<span class="imgsizelogo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="webimage/bottle1.png"  border="0" alt="not found" ></span>
+				 <th colspan=2>&nbsp;<span class="imgsizelogo"><img src="webimage/bottle1.png" width="990" height="50" border="0" alt="not found" ></span>
 				 &nbsp;&nbsp;<span id="fonttopiclogo">最新消息</span></th>
 				 <th class="center" id="fonttopic">詳細內容</th>
 				 <th class="center" id="fonttopic">&nbsp;&nbsp;所屬類別&nbsp;&nbsp;</th>
@@ -277,7 +255,7 @@
 			</tr>
 			<tr>
 				<td colspan=2><span class="imgsize"><img src="webimage/website8.png" width="70" height="70" border="0" ></span>&nbsp;
-				<font color="#ff3333" class="td1">2/10~2/14網站例行性維護造成使用者不便</font></td>
+				<font color="#ff3333" class="td1">2/10~2/14網站例行性維護造成使用者不便...</font></td>
 				<td>本系統將於2/10~2/14進行例行維護，會改善以下功能:</td>
 				
 				<td class="center" id="textbig">改版</td>
@@ -291,7 +269,9 @@
       <!-- @系統特色 -->
 	<span class="Head"><font size="51pt" color="#cc00ff"> <strong>本系統特色</strong></font></span>
 	<br><br>    
-	<span class="marginchange"><img src="webimage/characteristic.jpg" width="550" height="350" border="0" alt="not found" ><img src="webimage/characteristic1.jpg" width="550" height="350" border="0" alt="not found"><img src="webimage/characteristic2.jpg" width="550" height="350" border="0" alt="not found"></span>                 
+	<div align="center">
+        <span class="marginchange"><img src="webimage/characteristic.jpg" width="770" height="490" border="0" alt="not found" sizes=150%><br><img src="webimage/characteristic1.jpg" width="770" height="490" border="0" alt="not found"><br><img src="webimage/characteristic2.jpg" width="770" height="490" border="0" alt="not found"></span>
+    </div>                 
     <!-- ***** Portfolio Area End ***** -->
     <br><br>
     <!-- ***** Blog Area Start ***** -->
